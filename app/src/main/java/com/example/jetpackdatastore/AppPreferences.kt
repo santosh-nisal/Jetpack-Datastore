@@ -28,6 +28,6 @@ class AppPreferences(private val context: Context) {
 
     val studentName: Flow<String> = context.dataStore.data
         .map { preferences ->
-            preferences[STUDENT_NAME] ?: "Test Name"
+            preferences[STUDENT_NAME] ?: ""
         }
 }
